@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node-gyp rebuild"
+    "build": "node-gyp rebuild",
+    "test:ffi": "node src/ffi/ffi.js",
+    "test:addon": "node src/node-addon-api/index.js"
   },
   "author": "",
   "license": "ISC",

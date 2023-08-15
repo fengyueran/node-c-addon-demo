@@ -4,7 +4,7 @@
      "target_name": "math",
       "cflags!": [ "-fno-exceptions" ],
       "cflags_cc!": [ "-fno-exceptions" ],
-      "sources": [ "node-addon-api/math.cc" ],
+      "sources": [ "src/node-addon-api/source/math.cc" ],
       "include_dirs": [
         "<!@(node -p \"require('node-addon-api').include\")"
       ],

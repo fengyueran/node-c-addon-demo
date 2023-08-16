@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "node-gyp rebuild",
+    "build:ffi-math-lib": "rm -rf external/math.dylib && gcc -dynamiclib -o external/math.dylib src/ffi/source/math.cpp",
+    "build:addon-math-node": "rm -rf external/math.node && node-gyp rebuild && cp build/Release/math.node external/math.node",
     "test:ffi": "node src/ffi/index.js",
     "test:addon": "node src/node-addon-api/index.js"
   },

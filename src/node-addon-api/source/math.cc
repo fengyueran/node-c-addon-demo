@@ -1,6 +1,8 @@
 #include <napi.h>
 #include<iostream>
 #include<string>
+#include <unistd.h>
+
 using namespace Napi;
 //直接返回c++的数值类型数据到js
 Value getNumber(const CallbackInfo& info) {
@@ -18,6 +20,7 @@ Value addNumber(const CallbackInfo& info){
   double arg1 = info[1].As<Number>().DoubleValue();
   double num = arg0+arg1;
   Number result = Number::New(env, num);
+  usleep(3000000); //3s
   return result;
 }
 

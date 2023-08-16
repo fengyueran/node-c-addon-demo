@@ -1,7 +1,7 @@
 const ffi = require("ffi-napi");
 const path = require("path");
 
-const libPath = path.join(__dirname, "math.dylib");
+const libPath = path.join(__dirname, "../../external/math.dylib");
 
 const mathLib = ffi.Library(libPath, {
   Add: ["double", ["double", "double"]],
